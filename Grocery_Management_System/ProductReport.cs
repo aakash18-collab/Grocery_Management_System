@@ -10,27 +10,20 @@ using System.Windows.Forms;
 
 namespace Grocery_Management_System
 {
-    public partial class ProductManagement : Form
+    public partial class ProductReport : Form
     {
-        public ProductManagement()
+        public ProductReport()
         {
             InitializeComponent();
         }
 
-        private void trackBar1_Scroll(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label9_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Search fnd = new Search();
-            fnd.ShowDialog();
 
         }
     }

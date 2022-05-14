@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Grocery_Management_System
 {
-    public partial class StartSells : Form
+    public partial class Search : Form
     {
-        public StartSells()
+        public Search()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            OrderConfirm oc = new OrderConfirm();
-            oc.ShowDialog();
         }
     }
 }

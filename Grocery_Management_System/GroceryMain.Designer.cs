@@ -35,6 +35,8 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.startSellsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salesReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,7 +83,7 @@
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(938, 39);
+            this.menuStrip1.Size = new System.Drawing.Size(938, 38);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -90,7 +92,7 @@
             this.toolStripMenuItem1.BackColor = System.Drawing.Color.Black;
             this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(251, 35);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(237, 34);
             this.toolStripMenuItem1.Text = "Product Management";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
@@ -98,23 +100,42 @@
             // 
             this.startSellsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.startSellsToolStripMenuItem.Name = "startSellsToolStripMenuItem";
-            this.startSellsToolStripMenuItem.Size = new System.Drawing.Size(127, 35);
+            this.startSellsToolStripMenuItem.Size = new System.Drawing.Size(120, 34);
             this.startSellsToolStripMenuItem.Text = "Start Sells";
             this.startSellsToolStripMenuItem.Click += new System.EventHandler(this.startSellsToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem
             // 
+            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.productReportToolStripMenuItem,
+            this.salesReportToolStripMenuItem});
             this.reportsToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(106, 35);
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(101, 34);
             this.reportsToolStripMenuItem.Text = "Reports";
             this.reportsToolStripMenuItem.Click += new System.EventHandler(this.reportsToolStripMenuItem_Click);
+            // 
+            // productReportToolStripMenuItem
+            // 
+            this.productReportToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.productReportToolStripMenuItem.Name = "productReportToolStripMenuItem";
+            this.productReportToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.productReportToolStripMenuItem.Text = "Product Report";
+            this.productReportToolStripMenuItem.Click += new System.EventHandler(this.productReportToolStripMenuItem_Click);
+            // 
+            // salesReportToolStripMenuItem
+            // 
+            this.salesReportToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.salesReportToolStripMenuItem.Name = "salesReportToolStripMenuItem";
+            this.salesReportToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.salesReportToolStripMenuItem.Text = "Sales Report";
+            this.salesReportToolStripMenuItem.Click += new System.EventHandler(this.salesReportToolStripMenuItem_Click);
             // 
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(208, 35);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(197, 34);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
@@ -122,7 +143,7 @@
             // 
             this.aboutProjectToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.aboutProjectToolStripMenuItem.Name = "aboutProjectToolStripMenuItem";
-            this.aboutProjectToolStripMenuItem.Size = new System.Drawing.Size(168, 35);
+            this.aboutProjectToolStripMenuItem.Size = new System.Drawing.Size(159, 34);
             this.aboutProjectToolStripMenuItem.Text = "About Project";
             this.aboutProjectToolStripMenuItem.Click += new System.EventHandler(this.aboutProjectToolStripMenuItem_Click);
             // 
@@ -132,7 +153,7 @@
             this.exitToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.exitToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(65, 35);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(60, 34);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -212,5 +233,7 @@
         private Label label2;
         private Label label3;
         private Label label4;
+        private ToolStripMenuItem productReportToolStripMenuItem;
+        private ToolStripMenuItem salesReportToolStripMenuItem;
     }
 }

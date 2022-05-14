@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginPage));
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,20 +41,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // btnClear
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(215, 440);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 46);
-            this.button2.TabIndex = 25;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClear.Location = new System.Drawing.Point(215, 440);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(139, 46);
+            this.btnClear.TabIndex = 25;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.button2_Click);
             // 
             // label7
             // 
@@ -83,23 +83,24 @@
             this.label5.TabIndex = 22;
             this.label5.Text = "Admin Login";
             // 
-            // button1
+            // btnLogin
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(51, 440);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(158, 46);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnLogin.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnLogin.Location = new System.Drawing.Point(51, 440);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(158, 46);
+            this.btnLogin.TabIndex = 20;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(51, 392);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '☻';
             this.txtPassword.Size = new System.Drawing.Size(450, 27);
             this.txtPassword.TabIndex = 19;
             // 
@@ -159,18 +160,18 @@
             this.label4.Size = new System.Drawing.Size(450, 1);
             this.label4.TabIndex = 27;
             // 
-            // button3
+            // btnExit
             // 
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(360, 440);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 46);
-            this.button3.TabIndex = 28;
-            this.button3.Text = "Exit";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnExit.BackColor = System.Drawing.Color.Red;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnExit.Location = new System.Drawing.Point(360, 440);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(141, 46);
+            this.btnExit.TabIndex = 28;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.button3_Click);
             // 
             // LoginPage
             // 
@@ -178,14 +179,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1056, 490);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label3);
@@ -204,11 +205,11 @@
 
         #endregion
 
-        private Button button2;
+        private Button btnClear;
         private Label label7;
         private Label label6;
         private Label label5;
-        private Button button1;
+        private Button btnLogin;
         private TextBox txtPassword;
         private TextBox txtUsername;
         private Label label3;
@@ -216,6 +217,6 @@
         private Label label1;
         private PictureBox pictureBox1;
         private Label label4;
-        private Button button3;
+        private Button btnExit;
     }
 }

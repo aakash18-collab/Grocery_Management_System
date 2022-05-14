@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Grocery_Management_System
 {
-    public partial class Reports : Form
+    public partial class SalesReport : Form
     {
-        public Reports()
+        public SalesReport()
         {
             InitializeComponent();
         }
