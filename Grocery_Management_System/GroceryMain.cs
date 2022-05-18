@@ -30,9 +30,7 @@ namespace Grocery_Management_System
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             ProductManagement pm = new ProductManagement();
-            pm.Show();
-           
-
+            pm.Show();          
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -53,7 +51,7 @@ namespace Grocery_Management_System
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ChangePassword cp = new ChangePassword();
+            PasswordChange cp = new PasswordChange();
             cp.Show();
         }
 
@@ -78,6 +76,17 @@ namespace Grocery_Management_System
         {
             SalesReport sr = new SalesReport();
             sr.ShowDialog();
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            ChangeUsername cu = new ChangeUsername();
+            cu.ShowDialog();
         }
     }
 }
