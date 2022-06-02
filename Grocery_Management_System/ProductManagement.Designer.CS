@@ -49,12 +49,30 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnFind = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductManagement)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbCompany
             // 
             this.cmbCompany.FormattingEnabled = true;
+            this.cmbCompany.Items.AddRange(new object[] {
+            "Britannia",
+            "Dabur",
+            "Amul",
+            "Nestle",
+            "CG",
+            "Nepal Foods",
+            "Himalaya",
+            "PRAN",
+            "Dugar",
+            "Khajurico",
+            "KWALITY",
+            "Parle",
+            "Vadilal",
+            "Bikaji",
+            "Haldiram",
+            "Cadboury"});
             this.cmbCompany.Location = new System.Drawing.Point(130, 34);
             this.cmbCompany.Name = "cmbCompany";
             this.cmbCompany.Size = new System.Drawing.Size(212, 28);
@@ -81,12 +99,13 @@
             this.btnSave.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSave.Location = new System.Drawing.Point(113, 246);
+            this.btnSave.Location = new System.Drawing.Point(54, 246);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(113, 34);
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label2
             // 
@@ -177,10 +196,11 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(688, 1);
             this.label9.TabIndex = 26;
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // dgvProductManagement
             // 
+            this.dgvProductManagement.AllowUserToAddRows = false;
+            this.dgvProductManagement.AllowUserToDeleteRows = false;
             this.dgvProductManagement.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvProductManagement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductManagement.Location = new System.Drawing.Point(38, 336);
@@ -189,10 +209,21 @@
             this.dgvProductManagement.RowTemplate.Height = 29;
             this.dgvProductManagement.Size = new System.Drawing.Size(687, 228);
             this.dgvProductManagement.TabIndex = 27;
+            this.dgvProductManagement.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductManagement_CellDoubleClick);
             // 
             // cmbSelectType
             // 
             this.cmbSelectType.FormattingEnabled = true;
+            this.cmbSelectType.Items.AddRange(new object[] {
+            "Biscuits",
+            "Noodles",
+            "Tea",
+            "Soap",
+            "Soft Drinks",
+            "Juice",
+            "Pulses",
+            "Rice",
+            "Chocolate"});
             this.cmbSelectType.Location = new System.Drawing.Point(510, 29);
             this.cmbSelectType.Name = "cmbSelectType";
             this.cmbSelectType.Size = new System.Drawing.Size(212, 28);
@@ -203,31 +234,33 @@
             this.btnUpdate.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnUpdate.Location = new System.Drawing.Point(251, 246);
+            this.btnUpdate.Location = new System.Drawing.Point(189, 246);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(113, 34);
             this.btnUpdate.TabIndex = 32;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDelete.Location = new System.Drawing.Point(385, 246);
+            this.btnDelete.Location = new System.Drawing.Point(333, 246);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(113, 34);
             this.btnDelete.TabIndex = 33;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnFind
             // 
             this.btnFind.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFind.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnFind.Location = new System.Drawing.Point(525, 246);
+            this.btnFind.Location = new System.Drawing.Point(609, 246);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(113, 34);
             this.btnFind.TabIndex = 34;
@@ -235,12 +268,26 @@
             this.btnFind.UseVisualStyleBackColor = false;
             this.btnFind.Click += new System.EventHandler(this.button4_Click);
             // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClear.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnClear.Location = new System.Drawing.Point(470, 246);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(113, 34);
+            this.btnClear.TabIndex = 35;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // ProductManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(765, 596);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnFind);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
@@ -266,6 +313,7 @@
             this.Name = "ProductManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product Management";
+            this.Load += new System.EventHandler(this.ProductManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductManagement)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -294,5 +342,6 @@
         private Button btnUpdate;
         private Button btnDelete;
         private Button btnFind;
+        private Button btnClear;
     }
 }

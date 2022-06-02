@@ -78,5 +78,13 @@ namespace Grocery_Management_System
                 }
             }
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtConfirmPassword.Clear();
+            txtOldPassword.Clear();
+            txtNewPassword.Clear();
+            txtOldPassword.Focus();
+        }
     }
 }

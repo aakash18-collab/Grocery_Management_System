@@ -74,7 +74,7 @@ namespace Grocery_Management_System
 
         private void salesReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SalesReport sr = new SalesReport();
+            dgvSales sr = new dgvSales();
             sr.ShowDialog();
         }
 

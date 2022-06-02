@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Search));
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,12 +37,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox2
+            // txtId
             // 
-            this.textBox2.Location = new System.Drawing.Point(181, 56);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(212, 27);
-            this.textBox2.TabIndex = 11;
+            this.txtId.Location = new System.Drawing.Point(181, 56);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(212, 27);
+            this.txtId.TabIndex = 11;
             // 
             // label6
             // 
@@ -63,6 +63,7 @@
             this.button7.TabIndex = 32;
             this.button7.Text = "Search Data";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // label1
             // 
@@ -99,7 +100,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtId);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Search";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -111,7 +112,7 @@
 
         #endregion
 
-        private TextBox textBox2;
+        private TextBox txtId;
         private Label label6;
         private Button button7;
         private Label label1;
