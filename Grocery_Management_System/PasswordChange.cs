@@ -13,7 +13,7 @@ namespace Grocery_Management_System
 {
     public partial class PasswordChange : Form
     {
-        String str = "Server=AAKASH;Database=dbGrocery;User Id=sa;Password=aakashdahal;";
+        String str = "Server=.;Database=dbGrocery;User Id=sa;Password=aakashdahal;";
         public PasswordChange()
         {
             InitializeComponent();

@@ -14,7 +14,7 @@ namespace Grocery_Management_System
     
     public partial class LoginPage : Form
     {
-        private string constr = "Server=AAKASH;Database=dbGrocery;User Id=sa;Password=aakashdahal;";
+        private string constr = "Server=.;Database=dbGrocery;User Id=sa;Password=aakashdahal;";
         public LoginPage()
         {
             InitializeComponent();
@@ -68,7 +68,7 @@ namespace Grocery_Management_System
                         txtUsername.Focus();
                     }
                     else
-                    { 
+                    {
                         txtUsername.Clear();
                         txtPassword.Clear();
                         txtUsername.Focus();

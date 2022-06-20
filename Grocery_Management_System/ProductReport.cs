@@ -15,7 +15,7 @@ namespace Grocery_Management_System
     public partial class ProductReport : Form
     {
 
-        private string st = "Server=AAKASH;Database=dbGrocery;User Id=sa;Password=aakashdahal;";
+        private string st = "Server=.;Database=dbGrocery;User Id=sa;Password=aakashdahal;";
         public ProductReport()
         {
             InitializeComponent();
@@ -58,7 +58,7 @@ namespace Grocery_Management_System
                                 try
                                 {
                                     dgvProduct.Rows.Add();
-                                    dgvProduct.Rows[x].Cells[0].Value = reader["ID"].ToString();
+                                    dgvProduct.Rows[x].Cells[0].Value = reader["Product_Id"].ToString();
                                     dgvProduct.Rows[x].Cells[1].Value = reader["Name"].ToString();
                                     dgvProduct.Rows[x].Cells[2].Value = reader["Type"].ToString();
                                     dgvProduct.Rows[x].Cells[3].Value = reader["Company"].ToString();

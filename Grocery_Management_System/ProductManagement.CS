@@ -14,7 +14,7 @@ namespace Grocery_Management_System
     public partial class ProductManagement : Form
     {
 
-        string str = "Server=AAKASH;Database=dbGrocery;User Id=sa;Password=aakashdahal;";
+        string str = "Server=.;Database=dbGrocery;User Id=sa;Password=aakashdahal;";
         int _id = 0;
         public ProductManagement()
         {
@@ -117,7 +117,7 @@ namespace Grocery_Management_System
                 using(SqlCommand cmd = conn.CreateCommand())
                 {
                     conn.Open();
-                    cmd.CommandText = $"SELECT * FROM Product {(_id != 0 || _id > 0 ? "WHERE ID =" + _id : "")}";
+                    cmd.CommandText = $"SELECT * FROM Product {(_id != 0 || _id > 0 ? "WHERE Product_Id =" + _id : "")}";
                     cmd.CommandType = CommandType.Text;
                     DataTable dataTable = new DataTable();
                     SqlDataReader sdr = cmd.ExecuteReader();
@@ -160,7 +160,7 @@ namespace Grocery_Management_System
                         {
                             cmd.CommandText = ("UPDATE Product SET Name = '" + txtName.Text + "',Type = '" + cmbSelectType.Text + "'" +
                                 ",Company='" + cmbCompany.Text + "' ,Price='" + txtPricePerUnit.Text + "',Description='" + txtDescription.Text + "'," +
-                                "Stock='" + txtStock.Text + "' WHERE Id= '" + _id + "'");
+                                "Stock='" + txtStock.Text + "' WHERE Product_Id= '" + _id + "'");
                             cmd.CommandType = CommandType.Text;
 
                             cmd.Parameters.Clear();
@@ -210,7 +210,7 @@ namespace Grocery_Management_System
                     conn.Open();
                     using(SqlCommand cmd = conn.CreateCommand())
                     {
-                        cmd.CommandText = "DELETE  FROM Product WHERE Id ='"+_id+"' ";
+                        cmd.CommandText = "DELETE  FROM Product WHERE Product_Id ='"+_id+"' ";
                         cmd.CommandType = CommandType.Text;
                         cmd.Parameters.Clear();
                         try

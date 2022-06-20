@@ -13,7 +13,7 @@ namespace Grocery_Management_System
 {
     public partial class StartSells : Form
     {
-        string str = "Server=AAKASH;Database=dbGrocery;User Id=sa;Password=aakashdahal;";
+        string str = "Server=.;Database=dbGrocery;User Id=sa;Password=aakashdahal;";
         private int rowIndex = 0;
 
         public StartSells()
@@ -118,7 +118,7 @@ namespace Grocery_Management_System
                 conn.Open();
                 using(SqlCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandText = "SELECT ID,Name,Price FROM Product WHERE Name='"+cmbProduct.Text+"'  ";
+                    cmd.CommandText = "SELECT Product_Id,Name,Price FROM Product WHERE Name='"+cmbProduct.Text+"'  ";
                     cmd.CommandType = CommandType.Text;
                    
                     SqlDataReader sdr = cmd.ExecuteReader();
@@ -126,7 +126,7 @@ namespace Grocery_Management_System
                     {
                         product = new Product()
                         {
-                             Id = (int)sdr["ID"],
+                             Id = (int)sdr["Product_Id"],
 
                              Name = (string)sdr["Name"],
 
@@ -159,13 +159,13 @@ namespace Grocery_Management_System
         {
             if (MessageBox.Show("Do you want to delete this record", "Grocery Management", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                int id = Convert.ToInt32(dgvStartSells.Rows[e.RowIndex].Cells["ID"].FormattedValue.ToString());
+                int id = Convert.ToInt32(dgvStartSells.Rows[e.RowIndex].Cells["Order_Id"].FormattedValue.ToString());
                 using (SqlConnection conn = new SqlConnection(str))
                 {
                     conn.Open();
                     using (SqlCommand cmd = conn.CreateCommand())
                     {
-                        cmd.CommandText = "DELETE FROM Product WHERE ID = '" + id + "' ";
+                        cmd.CommandText = "DELETE FROM Product WHERE Order_Id = '" + id + "' ";
                         cmd.CommandType = CommandType.Text;
                         cmd.ExecuteReader();
                         MessageBox.Show("Successfully Deleted");
