@@ -141,19 +141,26 @@ namespace Grocery_Management_System
             }           
         }
         private void button7_Click(object sender, EventArgs e)
-        { 
-           int? total = Convert.ToInt32(product?.Price) * Convert.ToInt32(txtQuantity.Text);
-           dgvStartSells.Rows.Add(product?.Id, product?.Name ,product?.Price , txtQuantity.Text, total);
-
-            int sum = 0;
-            for (int i = 0; i < dgvStartSells.Rows.Count; i++)
+        {
+            if (txtQuantity.Text == string.Empty)
             {
-                sum += Convert.ToInt32(dgvStartSells.Rows[i].Cells[4].Value);
+                MessageBox.Show("Please add quantity", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            lbltotal.Text = sum.ToString();
-            cmbProduct.Text = String.Empty;
-            
-            txtQuantity.Clear();
+            else
+            {
+                int? total = Convert.ToInt32(product?.Price) * Convert.ToInt32(txtQuantity.Text);
+                dgvStartSells.Rows.Add(product?.Id, product?.Name, product?.Price, txtQuantity.Text, total);
+
+                int sum = 0;
+                for (int i = 0; i < dgvStartSells.Rows.Count; i++)
+                {
+                    sum += Convert.ToInt32(dgvStartSells.Rows[i].Cells[4].Value);
+                }
+                lbltotal.Text = sum.ToString();
+                cmbProduct.Text = String.Empty;
+
+                txtQuantity.Clear();
+            }
         }
         private void dgvStartSells_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {

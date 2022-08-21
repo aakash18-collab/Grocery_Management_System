@@ -42,7 +42,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnClear
@@ -59,16 +63,16 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(51, 100);
+            this.label7.Location = new System.Drawing.Point(181, 136);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(241, 20);
+            this.label7.Size = new System.Drawing.Size(139, 20);
             this.label7.TabIndex = 24;
-            this.label7.Text = "Urlabari \'3\' , Mangalbarey,  Morang";
+            this.label7.Text = "Amnil Technologies";
             // 
             // label6
             // 
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Location = new System.Drawing.Point(51, 153);
+            this.label6.Location = new System.Drawing.Point(51, 159);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(450, 1);
             this.label6.TabIndex = 23;
@@ -136,20 +140,21 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("PMingLiU-ExtB", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(31, 28);
+            this.label1.Font = new System.Drawing.Font("PMingLiU-ExtB", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(181, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(447, 47);
+            this.label1.Size = new System.Drawing.Size(189, 37);
             this.label1.TabIndex = 15;
-            this.label1.Text = "DAHAL GROCERIES";
+            this.label1.Text = "GROCERY";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(532, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(533, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(519, 484);
+            this.pictureBox1.Size = new System.Drawing.Size(491, 481);
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
             // 
@@ -174,12 +179,45 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.button3_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("PMingLiU-ExtB", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(181, 90);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(159, 37);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "SYSTEM";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(26, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(149, 151);
+            this.pictureBox2.TabIndex = 30;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("PMingLiU-ExtB", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(181, 50);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(277, 37);
+            this.label9.TabIndex = 31;
+            this.label9.Text = "MANAGEMENT";
+            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1056, 490);
+            this.ClientSize = new System.Drawing.Size(1035, 497);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
@@ -199,6 +237,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Log In";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +258,8 @@
         private PictureBox pictureBox1;
         private Label label4;
         private Button btnExit;
+        private Label label8;
+        private PictureBox pictureBox2;
+        private Label label9;
     }
 }
