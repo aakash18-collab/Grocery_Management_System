@@ -13,7 +13,7 @@ namespace Grocery_Management_System
 {
     public partial class StartSells : Form
     {
-        string str = "Server=.;Database=dbGrocery;User Id=sa;Password=aakashdahal;";
+        string str = "Server=DESKTOP-4Q5VENR\\AAKASH;Database=dbGrocery;User Id=sa;Password=aakashdahal;";
         private int rowIndex = 0;
 
         public StartSells()

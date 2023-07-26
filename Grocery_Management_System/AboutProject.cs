@@ -31,5 +31,10 @@ namespace Grocery_Management_System
         {
 
         }
+
+        private void AboutProject_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

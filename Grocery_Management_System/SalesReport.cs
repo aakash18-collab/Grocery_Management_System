@@ -14,7 +14,7 @@ namespace Grocery_Management_System
     public partial class dgvSales : Form
     {
 
-        private string st = "Server=.;Database=dbGrocery;User Id=sa;Password=aakashdahal;";
+        private string st = "Server=DESKTOP-4Q5VENR\\AAKASH;Database=dbGrocery;User Id=sa;Password=aakashdahal;";
         public dgvSales()
         {
             InitializeComponent();
