@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace Grocery_Management_System
 {
-    
+
     public partial class LoginPage : Form
     {
         private string constr = "Server=DESKTOP-4Q5VENR\\AAKASH;Database=dbGrocery;User Id=sa;Password=aakashdahal;";
@@ -52,8 +52,8 @@ namespace Grocery_Management_System
             else
             {
                 SqlConnection conn = new SqlConnection(constr);
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Login WHERE Username='"+txtUsername.Text+"' AND Password ='"+txtPassword.Text+"'",conn);
-               // cmd.Connection = conn;
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Login WHERE Username='" + txtUsername.Text + "' AND Password ='" + txtPassword.Text + "'", conn);
+                // cmd.Connection = conn;
 
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -78,11 +78,11 @@ namespace Grocery_Management_System
                         this.Close();
                     }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
-            }          
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
